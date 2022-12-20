@@ -1,12 +1,39 @@
-import React from 'react'
-const URL = "http://localhost:5000/birds"
+import axios from "axios";
+import React from "react";
+import Bird from "./Bird";
+import { useEffect, useState } from "react";
+const URL = "http://localhost:5000/birds";
+
+const fetchHandler = async () => {
+  return await axios.get(URL).then((res) => res.data);
+};
 
 const Birds = () => {
+  const [birds, setBirds] = useState();
+  useEffect(() => {
+    fetchHandler().then((data) => setBirds(data.birds));
+  }, []);
+  console.log(birds);
+
   return (
     <div>
-      Here all the birds
+      <ul>
+        
+        {birds &&
+          birds.map((bird, i) => (
+            <div className="bird" key={i}>
+              <Bird bird={bird} />
+            </div>
+          ))}
+      </ul>
     </div>
-  )
-}
+  );
+};
 
-export default Birds
+export default Birds;
+/* 
+1) hago la funcion fetch para traer la data del back al fron
+2)armo el useState hook
+3)armo el ueEffect hook 
+4) dentro del useeffect indico que mi estado sea lo que traigo del fetch
+*/
