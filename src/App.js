@@ -6,6 +6,7 @@ import Home from "./components/Home";
 import AddBird from "./components/AddBird"
 import AboutUs from "./components/AboutUs"
 import Birds from "./components/bird/Birds";
+import BirdDetail from "./components/bird/BirdDetail"
 function App() {
   return (
     <React.Fragment>
@@ -18,6 +19,7 @@ function App() {
   <Route  path="/add" element={<AddBird />} exact/>
   <Route  path="/about" element={<AboutUs />} exact/>
  <Route  path="/birds" element={<Birds />}/> 
+ <Route path="/birds:id" element={<BirdDetail />} exact />
 </Routes>
       </main>
     </React.Fragment>

@@ -1,15 +1,16 @@
 import React from "react";
 import { Button } from "@mui/material";
+import "./bird.css"
 const Bird = (props) => {
-  const { _id, species, gender, location, datoOfCatch, catchYourSelf, image } =
+  const {  species, gender, location, authorName, image } =
     props.bird;
   return (
-    <div>
+    <div className="card">
       <img src={image} alt={species} />
-      <article>{species}</article>
+      <h2>{species}</h2>
       <h3>{gender}</h3>
-      <p>{location}</p>
-      <h2>{datoOfCatch}</h2>
+      <p>Location: <i>{location}</i> </p>
+      <p>Picture taked by: <i>{authorName}</i></p>
       <Button>Update</Button>
       <Button>Delete</Button>
     </div>

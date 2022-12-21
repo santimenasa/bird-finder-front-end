@@ -1,6 +1,7 @@
 import axios from "axios";
 import React from "react";
 import Bird from "./Bird";
+import "./bird.css"
 import { useEffect, useState } from "react";
 const URL = "http://localhost:5000/birds";
 
@@ -21,9 +22,9 @@ const Birds = () => {
         
         {birds &&
           birds.map((bird, i) => (
-            <div className="bird" key={i}>
+            <li  key={i}>
               <Bird bird={bird} />
-            </div>
+            </li>
           ))}
       </ul>
     </div>
