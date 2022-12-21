@@ -1,8 +1,9 @@
 import React from "react";
 import { Button } from "@mui/material";
 import "./bird.css"
+import { Link } from "react-router-dom";
 const Bird = (props) => {
-  const {  species, gender, location, authorName, image } =
+  const { _id, species, gender, location, authorName, image } =
     props.bird;
   return (
     <div className="card">
@@ -11,7 +12,7 @@ const Bird = (props) => {
       <h3>{gender}</h3>
       <p>Location: <i>{location}</i> </p>
       <p>Picture taked by: <i>{authorName}</i></p>
-      <Button>Update</Button>
+      <Button LinkComponent={Link} to={`/birds/${_id}`}>Update</Button>
       <Button>Delete</Button>
     </div>
   );
