@@ -15,10 +15,10 @@ const AddBird = () => {
   });
 
   const handleChange = (e) => {
-    setInput((prevData) => ({
-      ...prevData,
-      [e.target.name]: e.target.value
-    }));
+      setInput((prevData) => ({
+        ...prevData,
+        [e.target.name]: e.target.value
+      }));
   };
 
   const sendRequest = async () => {
