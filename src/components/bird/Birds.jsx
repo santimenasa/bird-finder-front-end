@@ -17,7 +17,7 @@ const Birds = () => {
   console.log(birds);
 
   return (
-    <div>
+    <div className="birds">
       <ul>
         
         {birds &&

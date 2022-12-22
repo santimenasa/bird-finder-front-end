@@ -3,6 +3,7 @@ import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
 import { FormLabel, TextField, Button } from "@mui/material";
 import { Box } from "@mui/system";
+import "./bird.css"
 
 const BirdDetail = () => {
   const history = useNavigate();
@@ -44,7 +45,8 @@ const BirdDetail = () => {
   };
 
   return (
-    <div>
+    <div className="bird-detail">
+      <h2>Update info</h2>
       {input && (
         <form onSubmit={handleSubmit}>
           <Box

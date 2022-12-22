@@ -39,7 +39,7 @@ const AddBird = () => {
     sendRequest().then(() => history('/birds'))
   }
   return (
-    <>
+    <div className="add-bird">
       <h2 className="form-title">Complete the next form to upload the founded bird</h2>
     <form onSubmit={handleSubmit}>
     
@@ -119,7 +119,7 @@ const AddBird = () => {
         </Button>
       </Box>
     </form>
-    </>
+    </div>
   );
 };
 
