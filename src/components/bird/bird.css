@@ -42,3 +42,19 @@ li {
   margin: 0;
   padding: 5px;
 }
+.input{
+  margin-top: 20px;
+  width: 300px;
+  height: 50px;
+  font-size: xx-large;
+  color: #606c38;
+
+
+}
+ .input-span{
+ display: flex;
+ flex-direction: row;
+ justify-content: center;
+ align-items: center;
+ border-radius: 5%;
+}
